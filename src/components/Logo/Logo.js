@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Logo.css';
 import icon from '../../assets/icon.svg';
 
-export default class App extends React.Component {
+export default class Logo extends React.Component {
 	render() {
 		return (
 			<div>
