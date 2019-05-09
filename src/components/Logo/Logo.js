@@ -1,8 +1,8 @@
-import React from 'react';
-import classes from './Logo.css';
+import React, {Component} from 'react';
+import classes from './Logo.scss';
 import icon from '../../assets/icon.svg';
 
-export default class Logo extends React.Component {
+export default class Logo extends Component {
 	render() {
 		return (
 			<div>
