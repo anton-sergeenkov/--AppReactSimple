@@ -1,7 +1,7 @@
 {
-	"name": "app-react",
+	"name": "react-app-webpack",
 	"main": "webpack.config.js",
-	"description": "app-react",
+	"description": "react-app-webpack",
 	"license": "ISC",
 	"repository": {
 		"type": "git",
