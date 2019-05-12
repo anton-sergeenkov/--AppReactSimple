@@ -4,3 +4,9 @@
 body {
     //
 }
+
+:global {
+    a.active {
+        color: yellowgreen;
+    }
+}
