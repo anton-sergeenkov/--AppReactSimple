@@ -7,11 +7,15 @@ module.exports = {
 	devtool: 'source-map',
     entry: './src/index.js',
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'build')
+		filename: 'bundle.js',
+        path: path.resolve(__dirname, 'build'),
+		publicPath: '/'
 	},
 	devServer: {
-		contentBase: './dist'
+		contentBase: './dist',
+		historyApiFallback: {
+			disableDotRule: true
+		}
 	},
 	module: {
 		rules: [
