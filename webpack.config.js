@@ -5,9 +5,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
 	mode: 'development',
 	devtool: 'source-map',
-    entry: './src/index.js',
+    entry: './src/index.jsx',
     output: {
-		filename: 'bundle.js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, 'build'),
 		publicPath: '/'
 	},
@@ -17,12 +17,15 @@ module.exports = {
 			disableDotRule: true
 		},
 		stats: 'errors-only',
-		port: 3000
+		port: 3001
 	},
+	resolve: {
+        extensions: ['.js', '.jsx']
+    },
 	module: {
 		rules: [
 			{
-				test: /\.m?js$/,
+				test: /\.m?js|jsx$/,
 				exclude: /(node_modules|bower_components)/,
 				use: {
 					loader: 'babel-loader',
