@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import classes from './Logo.scss';
+import React, { Component } from 'react';
+import classes from './AppChild.scss';
 import icon from '../../assets/icon.svg';
 
-export default class Logo extends Component {
+export default class AppChild extends Component {
 	render() {
 		return (
 			<div>

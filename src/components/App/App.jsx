@@ -1,11 +1,13 @@
-import React, {Component} from 'react';
-import Logo from '../Logo/Logo';
+import React, { Component } from 'react';
+import AppChild from '../AppChild/AppChild';
+import AppRedux from '../AppRedux/AppRedux';
 
 export default class App extends Component {
 	render() {
 		return (
 			<div>
-				<Logo />
+				<AppChild />
+				<AppRedux />
 			</div>
 		);
 	}
