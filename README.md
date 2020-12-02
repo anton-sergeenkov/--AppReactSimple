@@ -6,13 +6,6 @@
 - Axios
 
 ### Нет поддержки `async await`
-- Необходимы пакеты
+- Сделать как в проекте
+- https://github.com/dev-pandaren/js-modules-comics/blob/master/src/index.js#L1
 
-```
-babel-plugin-syntax-async-functions
-babel-plugin-transform-regenerator
-babel-polyfill
-babel-preset-es2015
-babel-plugin-transform-async-to-generator
-@babel/plugin-transform-runtime
-```
