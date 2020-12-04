@@ -13,3 +13,7 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('root')
 );
+
+// testing redux native
+import './redux-native/redux-app';
+import './redux-native/redux-simple';

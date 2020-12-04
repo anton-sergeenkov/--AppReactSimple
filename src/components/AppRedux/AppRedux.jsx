@@ -1,22 +1,39 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { getPhotos } from '../../redux/actions';
+import { setName, setIncrement, getAsyncData } from '../../redux/actions';
 
-class AppRedux extends Component {
-	componentDidMount() {
-		this.props.getPhotos('New Year');
-	}
-	render() {
-		console.log(this.props.myValue);
-		return (<div></div>);
-	}
+const AppRedux = ({
+	reduxStarterData,
+	reduxAsyncData,
+	setName,
+	setIncrement,
+	getAsyncData
+}) => {
+
+	useEffect(() => {
+		getAsyncData();
+	}, []);
+
+	console.log(reduxStarterData);
+
+	return (
+		<>
+			<button onClick={() => setName('Jack')}>Name Jack</button>
+			<button onClick={() => setName('Tony')}>Name Tony</button>
+			<button onClick={() => setIncrement()}>Increment</button>
+		</>
+	);
 }
 
 const mapStateToProps = state => ({
-	myValue: state.myReducer
+	reduxStarterData: state.reducerStarter,
+	reduxAsyncData: state.reducerAsyncData
 })
+
 const mapDispatchToProps = {
-	getPhotos
+	setName,
+	setIncrement,
+	getAsyncData
 }
 export default connect(
 	mapStateToProps,

@@ -1,2 +1,5 @@
-export const GET_PHOTOS_REQUEST = 'GET_PHOTOS_REQUEST';
-export const GET_PHOTOS_SUCCESS = 'GET_PHOTOS_SUCCESS';
+export const NAME = 'NAME';
+export const INCREMENT = 'INCREMENT';
+
+export const ASYNC_PENDING = 'ASYNC_PENDING';
+export const ASYNC_SUCCESS = 'ASYNC_SUCCESS';

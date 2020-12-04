@@ -1,6 +1,9 @@
 import { combineReducers } from 'redux';
-import myReducer from './my-reducer';
+
+import reducerStarter from './reducer-starter';
+import reducerAsyncData from './reducer-async-data';
 
 export default combineReducers({
-    myReducer
+    reducerStarter,
+    reducerAsyncData
 });

@@ -1,22 +1,31 @@
 import axios from 'axios';
-import { GET_PHOTOS_REQUEST, GET_PHOTOS_SUCCESS } from './actionTypes';
+import { REQUEST_SERVER } from '../constants/api';
 
-export const getPhotos = function(year) {
-    return function(dispatch) {
+import { NAME, INCREMENT, ASYNC_PENDING, ASYNC_SUCCESS } from './actionTypes';
 
-        dispatch({
-            type: GET_PHOTOS_REQUEST,
-            payload: year
-        });
+// синхронный action
+export const setIncrement = () => ({
+    type: INCREMENT
+});
 
-        axios.get('http://anton-sergeenkov.ru/app/json-server/index.php')
-        .then(response => {
-            dispatch({
-                type: GET_PHOTOS_SUCCESS,
-                payload: response.data,
-            })
-        })
-        .catch(error => console.log(error));
-        
-    }
-}
+export const setName = (name) => ({
+	type: NAME,
+	payload: name
+});
+
+// асинхронный action
+export const getAsyncData = () => (dispatch) => {
+	// может быть несколько dispatch
+	dispatch({
+		type: ASYNC_PENDING
+	})
+
+	axios.get(REQUEST_SERVER.URL)
+		.then(response => {
+			dispatch({
+				type: ASYNC_SUCCESS,
+				payload: response.data,
+			})
+		})
+		.catch(error => console.log(error));
+};
