@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { setName, setIncrement, getAsyncData } from '../../redux/actions';
+import { setIncrement, getAsyncData } from '../../redux/actions';
+
+import Name from './Name';
+import NameHooks from './NameHooks';
 
 const AppRedux = ({
 	reduxStarterData,
 	reduxAsyncData,
-	setName,
 	setIncrement,
 	getAsyncData
 }) => {
@@ -18,9 +20,9 @@ const AppRedux = ({
 
 	return (
 		<>
-			<button onClick={() => setName('Jack')}>Name Jack</button>
-			<button onClick={() => setName('Tony')}>Name Tony</button>
 			<button onClick={() => setIncrement()}>Increment</button>
+			<Name />
+			<NameHooks />
 		</>
 	);
 }
@@ -31,7 +33,6 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
-	setName,
 	setIncrement,
 	getAsyncData
 }
