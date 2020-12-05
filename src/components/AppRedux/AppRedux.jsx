@@ -11,10 +11,10 @@ const AppRedux = ({
 }) => {
 
 	useEffect(() => {
-		getAsyncData();
+		// getAsyncData();
 	}, []);
 
-	console.log(reduxStarterData);
+	// console.log('View', reduxStarterData);
 
 	return (
 		<>

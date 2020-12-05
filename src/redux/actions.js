@@ -8,10 +8,14 @@ export const setIncrement = () => ({
     type: INCREMENT
 });
 
-export const setName = (name) => ({
-	type: NAME,
-	payload: name
-});
+// синхронный action в полной записи
+export const setName = (name) => {
+	// console.log('Action');
+	return {
+		type: NAME,
+		payload: name
+	}
+}
 
 // асинхронный action
 export const getAsyncData = () => (dispatch) => {

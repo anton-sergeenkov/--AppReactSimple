@@ -6,6 +6,8 @@ const initialState = {
 };
 
 const reducerStarter = (state = initialState, action) => {
+    // console.log('Reducer');
+
     switch (action.type) {
         // принимает данные
         case NAME:

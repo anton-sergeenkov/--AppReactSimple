@@ -1,5 +1,5 @@
-import store from '../redux/store';
-import { setIncrement } from '../redux/actions';
+import store from '../store';
+import { setIncrement } from '../actions';
 
 const reduxNative = () => {
 
@@ -18,7 +18,7 @@ const reduxNative = () => {
 	store.dispatch(setIncrement());
 }
 
-// reduxNative();
+reduxNative();
 
 // State 0
 // {

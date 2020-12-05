@@ -15,5 +15,5 @@ ReactDOM.render(
 );
 
 // testing redux native
-import './redux-native/redux-app';
-import './redux-native/redux-simple';
+// import './redux/redux-native/redux-app';
+// import './redux/redux-native/redux-simple';
